@@ -20,7 +20,7 @@ We specialize in developing mobile applications using Xamarin and native technol
 
 ### Install NUGET package
 ```
-Install-Package Naxam.Layouts
+Install-Package Naxam.Layouts.FlexLayout
 ```
 
 ### Add XML namespace in your XAML
@@ -28,7 +28,7 @@ Install-Package Naxam.Layouts
 xmlns:layout="clr-namespace:Naxam.Layouts;assembly=Naxam.Layouts"
 ```
 
-### Change the root element to BottomTabbedPage (change the code behind as well)
+###
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
