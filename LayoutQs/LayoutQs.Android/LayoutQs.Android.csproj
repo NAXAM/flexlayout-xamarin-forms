@@ -47,6 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Naxam.Layouts.FlexLayout">
+      <Version>1.0.0</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.122203" />
     <PackageReference Include="Xamarin.Android.Support.Design" Version="25.4.0.2" />
     <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="25.4.0.2" />
@@ -80,10 +83,6 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Naxam.Layouts\Naxam.Layouts.csproj">
-      <Project>{dfffb491-5dc9-45bc-b189-55c32d31a472}</Project>
-      <Name>Naxam.Layouts</Name>
-    </ProjectReference>
     <ProjectReference Include="..\LayoutQs\LayoutQs.csproj">
       <Project>{319799BC-3E0B-4959-9846-EEBD9480124F}</Project>
       <Name>LayoutQs</Name>

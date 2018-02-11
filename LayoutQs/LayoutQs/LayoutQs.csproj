@@ -5,11 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Naxam.Layouts.FlexLayout" Version="1.0.0" />
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.122203" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\Naxam.Layouts\Naxam.Layouts.csproj" />
   </ItemGroup>
 
   <ItemGroup>
