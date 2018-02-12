@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Xamarin.Forms;
+using static Xamarin.Forms.Grid;
 
 namespace Naxam.Layouts
 {
     [ContentProperty(nameof(Children))]
-    public class FlexLayout : Layout
-    {
+    public class FlexLayout : Layout<View>
+    {  
         protected override void LayoutChildren(double x, double y, double width, double height)
-        {
+        { 
             int row = 0;
             double total_w = 0;
             var maxlines = CalMaxHeight(width, height);
