@@ -5,18 +5,15 @@
     xmlns:local="clr-namespace:LayoutQs"
     xmlns:layout="clr-namespace:Naxam.Layouts;assembly=Naxam.Layouts"
     x:Class="LayoutQs.MainPage">
-    <layout:FlexLayout>
+    <layout:FlexLayout
+        ItemSpacing="24">
         <Label
-            Text="3333333"
-            VerticalOptions="Start"
-            Margin="16,8"
+            Text="33333ddddddddddddddd33" 
             BackgroundColor="Red" />
-        <Label
-            VerticalOptions="Center"
-            Margin="16,8"
+        <Label 
             FontSize="Medium"
             BackgroundColor="Blue"
-            Text="2222222222" />
+            Text="222222ddddddddddd2222" />
         <Label
             Margin="16,8"
             VerticalOptions="End"
@@ -28,25 +25,23 @@
             <Label
                 Margin="16,8"
                 BackgroundColor="Azure"
-                Text="123456789" />
+                Text="1234ddddddddddd56789" />
 
         </ContentView>
         <Label
-            Margin="16,8"
             BackgroundColor="Pink"
             VerticalOptions="Center"
-            Text="987654321" />
+            Text="9876ddddddddddddd54321" />
         <StackLayout
-            BackgroundColor="Yellow"
-            Margin="8">
+            BackgroundColor="Yellow">
             <Label
                 Margin="16,8"
                 BackgroundColor="Azure"
-                Text="123456789" />
+                Text="12345dddddddd6789" />
             <Label
                 Margin="16,8"
                 BackgroundColor="Pink"
-                Text="987654321" />
+                Text="987ddddddddd654321" />
         </StackLayout>
     </layout:FlexLayout>
 </ContentPage>
