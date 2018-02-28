@@ -9,13 +9,13 @@ namespace Naxam.Layouts
 {
     [ContentProperty(nameof(Children))]
     public class FlexLayout : Layout<View>
-    {  
+    {
         protected override void LayoutChildren(double x, double y, double width, double height)
-        { 
+        {
             int row = 0;
             double total_w = 0;
             var maxlines = CalMaxHeight(width, height);
-            foreach (var item in Children)
+            foreach (var item in Children.Where(d=>d.IsVisible==true))
             {
                 View view = (View)item;
                 if (view == null)
@@ -43,32 +43,32 @@ namespace Naxam.Layouts
         IList<double> CalMaxHeight(double width, double height)
         {
             double total_w = 0;
-            double linemax = 0;
             IList<double> maxlines = new List<double>();
-            foreach (var item in Children)
+            List<double> lst = new List<double>();
+            foreach (var item in Children.Where(d => d.IsVisible == true))
             {
                 View view = (View)item;
                 if (view == null)
                     continue;
                 var size = view.Measure(width, height, MeasureFlags.IncludeMargins);
                 var w = total_w + size.Request.Width;
-                if (linemax <= size.Request.Height)
-                {
-                    linemax = size.Request.Height;
-                }
+                lst.Add(size.Request.Height);
                 if (w > Width)
                 {
                     total_w = size.Request.Width;
-                    maxlines.Add(linemax);
-                    linemax = 0;
+                    lst.RemoveAt(lst.Count - 1);
+                    maxlines.Add(lst.Max());
+                    lst.Clear();
+                    lst.Add(size.Request.Height);
                 }
                 else
                 {
                     total_w = w;
                 }
+
                 if (Children.LastOrDefault() == item)
                 {
-                    maxlines.Add(linemax);
+                    maxlines.Add(lst.Max());
                 }
             }
             return maxlines;
